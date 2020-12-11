@@ -5,14 +5,14 @@
     1. id (pk)
     2. species (fk)
     3. date acquired
-    4. status
+    4. status (healthy, sick, dead, dormant, flowering, growth)
     5. location (fk)
     6. parent (fk)
     7. water needs 
       - inherited from species but configurable for each plant based on location 
     8. soil type (fk)
-    9. growlight (fk)
-    10. pot (fk)
+    9. light_source (fk)
+    10. container (fk)
 
 2. issue
     1. id (pk)
@@ -55,11 +55,26 @@
     2. description
     3. name (pk)
 7. FerilizerApplication 
-8. pot (lighting, pot, water delivery, trellis, etc.)
-   1. type (trellis, pot, lighting, etc)
-   2. name
-   3. plant (for lighting, pot, trellis, water delivery)
+8. container 
+    1. type (soil, hydro)
+    2. material ( plastic, ceramic)(use ENUM sql type)
+    3. volume
+    4. height
+    5. width
+    6. drainage (yes/no)
+    7. status (empty, in use, damaged, retired)
+    8. description
+    9. picture
+    10. location (fk)
+    11. id (pk)
+    
 9. supports
+    1. material
+    2. status
+    3. height
+    4. width
+    5. picture
+    6. id (pk)
 10. water_delivery (e.g. pumps, hydroponics systems)
    
 11. locations (dining room window, living room window, etc.)
@@ -67,6 +82,7 @@
    2. light: typical amount of light?
    3. temp: typical temp?
    4. humiditiy: typical humidity?
+      
 12. issues types
    - disease
    - pest

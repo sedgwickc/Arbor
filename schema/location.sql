@@ -1,7 +1,8 @@
 create table location (
-type int,
+type enum('INDOORS', 'OUTDOORS'),
 name varchar(255),
-light_amount int,
 temperature_avarage int,
 humidity_average int,
-primary key(type, name));
+light_source int,
+primary key(name),
+foreign key (light_source) references light_source(id));
