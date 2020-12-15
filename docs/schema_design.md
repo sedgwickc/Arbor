@@ -5,7 +5,7 @@
     1. id (pk)
     2. species (fk)
     3. date acquired
-    4. status (healthy, sick, dead, dormant, flowering, growth)
+    4. status (enum: healthy, sick, dead, dormant, flowering, growth)
     5. location (fk)
     6. parent (fk)
     7. water needs 
@@ -90,6 +90,7 @@
    - over watering
    - too little light
    - too much light (burning)
+     
 13. issues symptoms
    - leaf damage
    - leggy
@@ -98,6 +99,14 @@
    - leaf drop
    - leaf yellowing
 
+14. care_schedule
+    1. last performed (date)
+    2. day of the week (enum: 'SUN', 'MON', 'TUES', 'WED', 'THURS'...)
+    3. period (weekly, 2 weeks, 3 weeks, 4 weeks)(enum?)
+    4. type (enum: 'water', 'fertilizer', 'repotting')
+    5. plant (fk)
+    6. name (pk)
+    7. skipped (bool)
 
 ##Relationships
 - A plant has many
