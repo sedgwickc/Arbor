@@ -1,0 +1,30 @@
+{
+	"folders": {},
+	"connections": {
+		"h2_embedded-1766ce3510f-7be6920999ef1825": {
+			"provider": "generic",
+			"driver": "h2_embedded",
+			"name": "arbor_db.mv.db",
+			"save-password": true,
+			"show-system-objects": true,
+			"read-only": false,
+			"configuration": {
+				"database": "X:\\Nextcloud\\portfolio\\ArborCore\\arbor_db.mv.db",
+				"url": "jdbc:h2:X:\\Nextcloud\\portfolio\\ArborCore\\arbor_db.mv.db",
+				"type": "dev",
+				"auth-model": "native",
+				"handlers": {}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false
+		}
+	}
+}
