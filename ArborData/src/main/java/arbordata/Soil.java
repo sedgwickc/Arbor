@@ -24,8 +24,11 @@ public class Soil {
 	}
 	
 	/* member variables */
+	@Id
 	private String name;
+	
 	private String description;
+	
 	private String drainage;
 	
 	public Boolean someMethod() {
@@ -35,7 +38,6 @@ public class Soil {
 
 	/* getters/setters */
 
-	@Id
 	public String getName() {
 		return name;
 	}
